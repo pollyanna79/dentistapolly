@@ -1,0 +1,44 @@
+
+.moldura  {
+  flex: 1 1 300px;
+  height: 350px;
+  background-color: gainsboro;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 5px 15px;
+}
+
+  .moldura  p {
+    line-height: 25px;
+    letter-spacing: 2px;
+    padding: 0px 20px 20px;
+    font-style: italic;
+  }
+   .moldura h3 {
+    text-align: center;
+    color: orange;
+    font-size: 20px;
+    
+  }
+  .info {
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    gap: 10px;
+  }
+  .info img  {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .img_aparelho{
+    display: inline-flex;
+  }
