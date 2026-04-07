@@ -8,7 +8,7 @@ import Cliente03 from "/public/cliente03.png";
 import Dentista01 from "/public/dentista01.png";
 import Dentista02 from "/public/dentista02.png";
 import CardDepoimento from "./Componentes/Depoimentos/indexdepoimentos";
-import MolduraInformacoes from "./Componentes/MolduraInformacoes";
+import MolduraInformacoes from "./Componentes/Moldurainformacoes/index.jsx";
 
 
 
