@@ -76,6 +76,7 @@
   justify-content: center;
   flex: 1 1 400px;
   padding: 10px 0px;
+  box-shadow: 0 10px 15px -10px rgba(163, 162, 162, 0.3);
 }
 
 .lista_servicos li img {
@@ -240,5 +241,23 @@
 }
 .lista_beneficios h3{
   color: #fdb203;
+  text-align: center;
+}
+.lista_horarios h2{
+  text-align: center;
+  color: orange;
+
+}
+.secao_informacoes h2{
+  text-align: center;
+  color: orange;
+}
+.lista_horarios{
+  list-style-type: none;
+  
+  display: flex;
+  flex-direction: column; /* Itens um embaixo do outro */
+  align-items: center;    /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente (se o pai tiver altura) */
   text-align: center;
 }

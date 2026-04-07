@@ -135,6 +135,8 @@ export default function Home() {
       
         <MolduraInformacoes>
           < ul className={estilos.lista_horarios}>
+          <h2>Horários e dia de Atendimento</h2>
+
             <li>Segunda - 09:00 às 18:00</li>
             <li>Terça - 09:00 às 18:00</li>
             <li>Quarta - 09:00 às 18:00</li>
@@ -146,7 +148,7 @@ export default function Home() {
         
         
         <MolduraInformacoes>
-        
+        <h2>Médicos </h2>
           <div className={estilos.card}>
              <Image
                 className={estilos.img_aparelho}
@@ -175,11 +177,17 @@ export default function Home() {
         
         
         <MolduraInformacoes>
-
+          <h2>Contatos</h2>
           <div className={estilos.fones}>
           <p>Ligue para agendar uma consulta:</p>
-          <p>(21) 3699 - 9999</p>
-          <p>(21) 97788 - 5566</p>
+          <p style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+      <span>📞</span> (21) 3699 - 9999
+    </p>
+
+    {/* Ícone de Celular/WhatsApp (Emoji) */}
+    <p style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+      <span>📱</span> (21) 97788 - 5566
+    </p>
           </div>
           </MolduraInformacoes>
         
