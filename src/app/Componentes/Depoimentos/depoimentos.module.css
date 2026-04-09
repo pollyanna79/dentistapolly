@@ -26,3 +26,14 @@
     padding: 0px 20px 20px;
     font-style: italic;
   }
+  /* Responsividade para textos */
+@media (max-width: 480px) {
+    .card_depoimento h3 {
+        font-size: 20px; /* Diminui um pouco o título em celulares */
+    }
+    
+    .card_depoimento p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

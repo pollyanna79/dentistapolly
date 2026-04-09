@@ -134,9 +134,9 @@ export default function Home() {
     <section className={estilos.secao_informacoes}>
       
         <MolduraInformacoes>
-          < ul className={estilos.lista_horarios}>
+          
           <h2>Horários e dia de Atendimento</h2>
-
+       < ul className={estilos.lista_horarios}>
             <li>Segunda - 09:00 às 18:00</li>
             <li>Terça - 09:00 às 18:00</li>
             <li>Quarta - 09:00 às 18:00</li>
@@ -147,41 +147,46 @@ export default function Home() {
           </MolduraInformacoes>
         
         
-        <MolduraInformacoes>
-        <h2>Médicos </h2>
-          <div className={estilos.card}>
-             <Image
-                className={estilos.img_aparelho}
-                src={Dentista01}
-                alt="Dr. Ana"
-                title="Dr. Ana"
-              />          
-              
-             <div>
-              <p>Dra. Ana - Ortodontista</p>
-              <p>Segundas e sextas</p>
-            </div>
-            
-              <Image
-                className={estilos.img_aparelho}
-                src={Dentista02}
-                alt="Dr. Carlos"
-                title="Dr. Carlos"
-              />
-              <div>
-              <p>Dr. Carlos - Endodontia</p>
-              <p>Terças e quartas</p> 
-              </div>  
-              </div>
-              </MolduraInformacoes>
         
-        
-        <MolduraInformacoes>
-          <h2>Contatos</h2>
-          <div className={estilos.fones}>
-          <p>Ligue para agendar uma consulta:</p>
-          <p style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
-      <span>📞</span> (21) 3699 - 9999
+       <MolduraInformacoes>
+  <h2>Médicos</h2>
+  
+  <div className={estilos.container_medicos}> {/* Novo container pai */}
+    
+    {/* Card do Médico 1 */}
+    <div className={estilos.card_individual}>
+      <Image
+        className={estilos.img_medico}
+        src={Dentista01}
+        alt="Dra. Ana"
+      />
+      <div className={estilos.info_texto}>
+        <p><strong>Dra. Ana</strong> - Ortodontista</p>
+        <p>Segundas e sextas</p>
+      </div>
+    </div>
+
+    {/* Card do Médico 2 */}
+    <div className={estilos.card_individual}>
+      <Image
+        className={estilos.img_medico}
+        src={Dentista02}
+        alt="Dr. Carlos"
+      />
+      <div className={estilos.info_texto}>
+        <p><strong>Dr. Carlos</strong> - Endodontia</p>
+        <p>Terças e quartas</p>
+      </div>
+    </div>
+
+  </div>
+</MolduraInformacoes>  
+ <MolduraInformacoes>
+ <h2>Contatos</h2>
+  <div className={estilos.fones}>
+ <p>Ligue para agendar uma consulta:</p>
+   <p style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+   <span>📞</span> (21) 3699 - 9999
     </p>
 
     {/* Ícone de Celular/WhatsApp (Emoji) */}
@@ -190,11 +195,7 @@ export default function Home() {
     </p>
           </div>
           </MolduraInformacoes>
-        
-        
         </section>
-     
-
     {/* Seção localização */}
     <section className={estilos.secao_localizacao}>
       <div>

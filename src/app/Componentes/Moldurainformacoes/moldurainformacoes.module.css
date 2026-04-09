@@ -42,3 +42,14 @@
   .img_aparelho{
     display: inline-flex;
   }
+@media (max-width: 480px) {
+  .moldura {
+    flex: 1 1 100%; /* Ocupa a largura toda no celular */
+    padding: 10px;
+  }
+  
+  .moldura p {
+    letter-spacing: 0.5px; /* Reduz o espaçamento para caber mais palavras */
+    font-size: 14px;
+  }
+}

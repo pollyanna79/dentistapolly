@@ -4,12 +4,16 @@
   position: fixed;
   width: 100%;
 }
+.topo {
+  z-index: 1000; /* Garante que o topo fique sempre acima de tudo */
+}
 
 .container_logo {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  font-size: clamp(18px, 5vw, 26px);
 }
 
 .container_logo img {
@@ -27,11 +31,11 @@
 /* Seção apresentação da página */
 .secao_apresentacao {
   background-color: #1b3675;
-  padding: 120px 20px 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding: 100px 20px 50px;
 }
 
 .container_texto_apresentacao {
@@ -45,10 +49,12 @@
 
 .container_texto_apresentacao h1 {
   color: #fdb203;
-  font-size: 30px;
+  font-size: clamp(22px, 6vw, 30px);
+  letter-spacing: 1.5px;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2.4px;
+
 }
 
 .container_texto_apresentacao span {
@@ -77,6 +83,7 @@
   flex: 1 1 400px;
   padding: 10px 0px;
   box-shadow: 0 10px 15px -10px rgba(163, 162, 162, 0.3);
+
 }
 
 .lista_servicos li img {
@@ -130,8 +137,8 @@
 .lista_beneficios li {
   padding: 10px 10px;
   list-style: none;
-  text-align: left;
-  flex: 1 1 300px;
+  flex: 1 1 280px;
+  text-align: center;
 }
 
 /* Seção depoimentos clientes*/
@@ -151,13 +158,6 @@
   gap: 30px;
 }
 
-/* Seção de contatos */
-.secao_informacoes {
-  display: flex;
-  flex-direction: column;
-  padding: 50px 20px;
-  gap: 30px;
-}
 
 .container_informacoes {
   max-width: 1024px;
@@ -171,16 +171,39 @@
 }
 
 .lista_horarios {
-  line-height: 30px;
-  text-align: left;
+/* Garante que a lista ocupe o espaço disponível, mas não mais que isso */
+  width: 100%; 
+  max-width: 100%; 
+  
+  /* Essencial: faz com que padding e border não aumentem o tamanho total */
+  box-sizing: border-box; 
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.card {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid gainsboro;
+.lista_horarios li:hover {
+  background-color: #fff2e6; /* Efeito visual ao passar o mouse */
+}
+
+/* Ajustes para Celular */
+@media (max-width: 480px) {
+  .lista_horarios li {
+    font-size: 14px;
+    padding: 10px 5px;
+    /* Se o horário ainda ficar apertado, podemos empilhar: */
+    /* flex-direction: column; */
+    /* text-align: center; */
+  }
+
+  .lista_horarios {
+    padding: 10px;
+  }
 }
 
 .card figure {
@@ -190,6 +213,8 @@
   justify-content: center;
   width: 80px;
   height: 80px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .card div {
@@ -246,18 +271,87 @@
 .lista_horarios h2{
   text-align: center;
   color: orange;
+  font-size: clamp(18px, 4vw, 24px);
+  margin-bottom: 20px;
 
 }
 .secao_informacoes h2{
   text-align: center;
   color: orange;
 }
-.lista_horarios{
-  list-style-type: none;
+
+@media (max-width: 768px) {
+  /* Reduz espaçamentos gerais */
+  .secao_apresentacao, 
+  .secao_beneficios, 
+  .secao_depoimentos, 
+  .secao_informacoes {
+    padding: 40px 15px;
+  }
+
+  .subtitulo {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  /* Ajusta a imagem do aparelho para não ficar desproporcional */
+  .container_img_aparelho {
+    max-width: 100%;
+  }
+
+  /* Centraliza informações de contato no mobile */
+  .container_informacoes {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Faz com que cada item de serviço ocupe a linha toda se necessário */
+  .lista_servicos li {
+    flex: 1 1 100%;
+  }
+
+  /* Ajuste no card de contato */
+  .card figure {
+    flex: 1 1 100%; /* Imagem em cima */
+    height: 60px;
+  }
   
-  display: flex;
-  flex-direction: column; /* Itens um embaixo do outro */
-  align-items: center;    /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente (se o pai tiver altura) */
-  text-align: center;
 }
+
+.container_medicos {
+  display: flex;
+  flex-direction: row; /* Garante que fiquem um ao lado do outro */
+  flex-wrap: wrap;     /* Se a tela for muito pequena, eles pulam linha em vez de vazar */
+  justify-content: center;
+  gap: 15px;           /* Espaço entre os cards dos médicos */
+  width: 100%;         /* Ocupa a largura total disponível na moldura */
+  padding: 10px 0;
+}
+
+.card_individual {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  
+  /* Explicação do flex: 
+     1 (cresce), 1 (encolhe), 250px (tamanho base). 
+     Isso permite que dois cards de 250px caibam lado a lado em uma moldura de 500px+ */
+  flex: 1 1 250px; 
+  
+  max-width: 100%; 
+  gap: 10px;
+}
+.img_medico {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* Impede que a imagem seja achatada */
+}
+
+
+
