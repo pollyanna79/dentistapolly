@@ -1,12 +1,5 @@
 import estilos from "./page.module.css";
 import Image from "next/image";
-import Dente from "/public/dente.png";
-import Aparelho from "/public/aparelho.png";
-import Cliente01 from "/public/cliente01.png";
-import Cliente02 from "/public/cliente02.png";
-import Cliente03 from "/public/cliente03.png";
-import Dentista01 from "/public/dentista01.png";
-import Dentista02 from "/public/dentista02.png";
 import CardDepoimento from "./componentes/depoimentos/indexdepoimentos";
 import MolduraInformacoes from "./componentes/moldurainformacoes/index.jsx";
 
@@ -18,9 +11,11 @@ export default function Home() {
     <header className={estilos.topo}>
       <div className={estilos.container_logo}>
         <Image
-          src={Dente}
+          src= "/dente.png"
           alt="logo dentes saudáveis"
           title="logo dentes saudáveis"
+          width={50}  
+        height={50}
         />
         <p>Dentes Saudáveis</p>
       </div>
@@ -40,22 +35,26 @@ export default function Home() {
 
       <ul className={estilos.lista_servicos}>
         <li>
-          <Image src={Dente} alt="logo" title="logo" />
+          <Image src="/dente.png" alt="logo" title="logo" width={50} 
+    height={50} />
           <p>Pré-avaliação</p>
         </li>
 
         <li>
-          <Image src={Dente} alt="logo" title="logo" />
+          <Image src="/dente.png" alt="logo" title="logo" width={50} 
+    height={50} />
           <p>Aparelhos Dentários</p>
         </li>
 
         <li>
-          <Image src={Dente} alt="logo" title="logo" />
+          <Image src="/dente.png" alt="logo" title="logo" width={50} 
+    height={50} />
           <p>Raio-X digital</p>
         </li>
 
         <li>
-          <Image src={Dente} alt="logo" title="logo" />
+          <Image src="/dente.png" alt="logo" title="logo" width={50} 
+    height={50} />
           <p>Clareamento dental</p>
         </li>
       </ul>
@@ -69,9 +68,12 @@ export default function Home() {
         </h2>
         <figure className={estilos.container_img_aparelho}>
           <Image
-            src={Aparelho}
+            src="/aparelho.png"
             alt="Imagem do uso de um aparelho"
             title="Imagem do uso de um aparelho"
+            width={350}
+            height={400}
+
           />
         </figure>
       </div>
@@ -113,17 +115,17 @@ export default function Home() {
 
       <div className={estilos.container_depoimentos}>
         <CardDepoimento
-          imagem={Cliente01}
+          imagem="/cliente01.png"
           nome={"Alberto"}
           descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
         />
         <CardDepoimento
-          imagem={Cliente02}
+          imagem="/cliente02.png"
           nome={"Eliana"}
           descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
         />
         <CardDepoimento
-          imagem={Cliente03}
+          imagem="/cliente03.png"
           nome={"Carla"}
           descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
         />
@@ -157,8 +159,10 @@ export default function Home() {
     <div className={estilos.card_individual}>
       <Image
         className={estilos.img_medico}
-        src={Dentista01}
+        src="/dentista01.png"
         alt="Dra. Ana"
+        width={200}
+        height={200}
       />
       <div className={estilos.info_texto}>
         <p><strong>Dra. Ana</strong> - Ortodontista</p>
@@ -170,8 +174,10 @@ export default function Home() {
     <div className={estilos.card_individual}>
       <Image
         className={estilos.img_medico}
-        src={Dentista02}
+        src="/dentista02.png"
         alt="Dr. Carlos"
+        width={200}
+        height={200}
       />
       <div className={estilos.info_texto}>
         <p><strong>Dr. Carlos</strong> - Endodontia</p>

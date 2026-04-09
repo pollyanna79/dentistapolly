@@ -8,6 +8,8 @@ export default function CardDepoimento(props){
         src={props.imagem}
         alt={props.nome}
         title={props.nome}
+        width={300}
+        height={300}
         />
         <h3>{props.nome}</h3>
         <p>{props.descricao}</p>
