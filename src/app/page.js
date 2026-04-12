@@ -1,7 +1,7 @@
 import estilos from "./page.module.css";
 import Image from "next/image";
-import CardDepoimento from "./componentes/depoimentos/indexdepoimentos.jsx";
-import MolduraInformacoes from "./componentes/moldurainformacoes/index.jsx";
+import CardDepoimento from "./Componentes/depoimentos/indexdepoimentos.jsx";
+import MolduraInformacoes from "./Componentes/moldurainformacoes/index.jsx";
 
 
 
